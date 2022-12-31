@@ -93,7 +93,6 @@ Token *tokenize(char *p) {
       continue;
     }
 
-    // strtol は頭から数字を読んで数字以外が来ると以降を&pに戻す
     if (isdigit(*p)) {
       cur = new_token(TK_NUM, cur, p);
       cur->val = strtol(p, &p, 10);
